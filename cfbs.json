@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "inventory-etc-login-defs",
   "description": "Inventory useful bits from /etc/login.defs",
   "provides": {
@@ -6,9 +7,10 @@
       "name": "inventory-etc-login-defs",
       "description": "Inventory useful bits from /etc/login.defs",
       "repo": "https://github.com/nickanderson/cfengine-inventory-etc-login-defs",
-      "version": "0.0.3",
+      "version": "0.0.4",
       "steps": [
-        "copy ./inventory-etc-login-defs.cf services/inventory-etc-login-defs/inventory-etc-login-defs.cf",
+        "copy ./inventory-etc-login-defs.cf services/cfbs/inventory-etc-login-defs.cf",
+        "policy_files services/cfbs/inventory-etc-login-defs.cf",
         "json cfbs/def.json def.json"
       ]
     }
